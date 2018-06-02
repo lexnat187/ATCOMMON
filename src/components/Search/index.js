@@ -1,1 +1,1 @@
-export { default } from './containers/SearchBar'
+export { default } from './components/SearchBar'

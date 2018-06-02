@@ -1,1 +1,1 @@
-export { default } from './containers/Filters'
+export { default } from './components/Filters'
