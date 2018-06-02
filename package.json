@@ -1,0 +1,27 @@
+{
+  "name": "ATCOMMON",
+  "version": "1.0.0",
+  "description": "A repository holding common React components",
+  "main": "build/index.js",
+  "repository": "https://github.com/lexnat187/ATCOMMON.git",
+  "author": "Alexander Walker",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d build",
+    "prepare": "yarn run build"
+   },
+  "dependencies": {
+    "@material-ui/core": "^1.1.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-responsive": "^4.1.0",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
