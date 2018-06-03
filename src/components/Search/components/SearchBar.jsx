@@ -15,7 +15,7 @@ class SearchBar extends Component {
 
   executeSearch = (searchQuery, colour) => {
     const { search } = this.state
-    this.props.actions.search(search, 'default')
+    this.props.actions.search(search, 'Red')
   }
 
   handleChange = name => event => {

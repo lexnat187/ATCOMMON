@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import FilterButton from '../components/FilterButton'
-import { search } from '../../../actions'
+// import { search } from '../../../actions'
 
 const mapStateToProps = (state) => ({
     filterResult: state.filters.filterResult,
@@ -12,7 +12,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
-    search
+    search: null
   }, dispatch)
 })
 
