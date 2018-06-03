@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-const baseURL = 'https://prod2.atgcdn.ae/small_light(p=listing2x,of=webp)/pub/media/catalog/product/'
-
 const STYLES = {
     parent: {
       style: {
@@ -9,22 +7,25 @@ const STYLES = {
         height: '100%',
         objectFit: 'cover'
       },
-      bodyStyle: {
-        backgroundColor: '#f4f4f4'
-      },
-      contentStyle: {
-        color: '#262626'
+      imgStyle: {
+        maxWidth: '400px',
+        maxHeight: '400px'
       }
     }
   }
 
 export default class ProductItem extends Component {
     render () {
-        const { image, name, price } = this.props
+        const { baseIMGURL, image, name, price } = this.props
 
         return(
             <div style={STYLES.parent.style}>
-                <img key={image} src={`${baseURL}${image}`} alt="" className="img-responsive" />
+                <img 
+                  style={STYLES.parent.imgStyle} 
+                  key={image} 
+                  src={`${baseIMGURL}${image}`} 
+                  alt="" className="img-responsive" 
+                />
                 <div>
                     {name}
                     <br/>
