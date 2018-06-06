@@ -47,12 +47,6 @@ class Products extends Component {
     }
   }
 
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value,
-    })
-  }
-
   renderProducts = () => {
     const { products } = this.state
     const { baseIMGURL } = this.props

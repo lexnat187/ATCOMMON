@@ -34,12 +34,6 @@ class Filters extends Component {
     }
   }
 
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value,
-    })
-  }
-
   componentDidMount () {
       this.props.actions.getFilters()
   }
