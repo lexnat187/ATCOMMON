@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import MediaQuery from 'react-responsive'
+import styled from 'styled-components'
 
 import ProductItem from './ProductItem'
 
