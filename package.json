@@ -1,6 +1,6 @@
 {
   "name": "ATCOMMON",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A repository holding common React components",
   "main": "build/index.js",
   "repository": "https://github.com/lexnat187/ATCOMMON.git",
