@@ -1,6 +1,6 @@
 {
   "name": "ATCOMMON",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A repository holding common React components",
   "main": "build/index.js",
   "repository": "https://github.com/lexnat187/ATCOMMON.git",
@@ -16,7 +16,6 @@
     "radium": "^0.24.0",
     "react": "^16.4.0",
     "react-redux": "^5.0.7",
-    "react-responsive": "^4.1.0",
     "redux": "^4.0.0",
     "styled-components": "^3.3.2"
   },

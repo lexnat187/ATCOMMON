@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 
 import ProductItem from './ProductItem'
@@ -11,38 +10,20 @@ const STYLES = {
         display: 'inline-block',
         marginTop: '20px'
     }
-  },
-  containerLG: {
-    style: {
-        display: 'grid',
-        gridGap: '5px',
-        gridTemplateColumns: 'repeat(2, 440px)',
-        gridTemplateRows: 'repeat(auto-fit, 440px)'
-    }
-  },
-  containerSM: {
-    style: {
-        display: 'grid',
-        gridGap: '5px',
-        gridTemplateColumns: 'repeat(1, 440px)',
-        gridTemplateRows: 'repeat(auto-fit, 440)'
-    }
   }
 }
 
 const Content = styled.div`
-    display: 'grid',
-    gridGap: '5px',
-    gridTemplateColumns: 'repeat(2, 440px)',
-    gridTemplateRows: 'repeat(auto-fit, 440px)
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 440px);
+    grid-template-rows: repeat(auto-fit, 440px);
 
     @media (max-width: 1224px) {
-        display: 'grid',
-        gridGap: '5px',
-        gridTemplateColumns: 'repeat(1, 440px)',
-        gridTemplateRows: 'repeat(auto-fit, 440)'
+        grid-template-columns: repeat(1, 440px);
     }
 `;
+
 class Products extends Component {
 
     constructor() {
@@ -82,21 +63,9 @@ class Products extends Component {
   render () {
     return (
         <div style={STYLES.topParent.style}>
-            {/* <MediaQuery query="(min-device-width: 1224px)">
-                <div style={STYLES.containerLG.style} >
-                    {this.renderProducts()}
-                </div>
-            </MediaQuery>
-            <MediaQuery query="(max-device-width: 1224px)">
-                <div style={STYLES.containerSM.style} >
-                    {this.renderProducts()}
-                </div>
-            </MediaQuery> */}
-
             <Content >
                 {this.renderProducts()}
             </Content>
-            
         </div>
     )
   }
