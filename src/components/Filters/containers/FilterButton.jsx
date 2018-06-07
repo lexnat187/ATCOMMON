@@ -5,9 +5,7 @@ import FilterButton from '../components/FilterButton'
 // import { search } from '../../../actions'
 
 const mapStateToProps = (state) => ({
-    filterResult: state.filters.filterResult,
-    searchQuery: state.search.searchQuery,
-    searchFilter: state.search.searchFilter
+    searchQuery: state.search.searchQuery
 })
 
 const mapDispatchToProps = (dispatch) => ({
