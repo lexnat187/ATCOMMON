@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import MediaQuery from 'react-responsive'
+import styled from 'styled-components'
 
 import ProductItem from './ProductItem'
 
@@ -29,6 +30,19 @@ const STYLES = {
   }
 }
 
+const Content = styled.div`
+    display: 'grid',
+    gridGap: '5px',
+    gridTemplateColumns: 'repeat(2, 440px)',
+    gridTemplateRows: 'repeat(auto-fit, 440px)
+
+    @media (max-width: 1224px) {
+        display: 'grid',
+        gridGap: '5px',
+        gridTemplateColumns: 'repeat(1, 440px)',
+        gridTemplateRows: 'repeat(auto-fit, 440)'
+    }
+`;
 class Products extends Component {
 
     constructor() {
@@ -68,7 +82,7 @@ class Products extends Component {
   render () {
     return (
         <div style={STYLES.topParent.style}>
-            <MediaQuery query="(min-device-width: 1224px)">
+            {/* <MediaQuery query="(min-device-width: 1224px)">
                 <div style={STYLES.containerLG.style} >
                     {this.renderProducts()}
                 </div>
@@ -77,7 +91,12 @@ class Products extends Component {
                 <div style={STYLES.containerSM.style} >
                     {this.renderProducts()}
                 </div>
-            </MediaQuery>
+            </MediaQuery> */}
+
+            <Content >
+                {this.renderProducts()}
+            </Content>
+            
         </div>
     )
   }
